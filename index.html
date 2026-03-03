@@ -268,12 +268,22 @@ section.active{
 }
 /* TIMELINE */
 .timeline{
-  border-left:3px solid cyan;
-  padding-left:20px;
+  position: relative;
+  padding-left: 30px;
 }
 
-.timeline div{
-  margin-bottom:20px;
+.timeline::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: cyan;
+}
+
+.timeline-item{
+  margin-bottom: 30px;
 }
 
 /* FOOTER */
@@ -360,19 +370,26 @@ in coding competitions.
 
 <!-- EDUCATION -->
 <section id="education">
-<h2 class="title">Education</h2>
-<div class="timeline">
-<div>
-<h3>B.Tech Computer Science (Data Science) </h3>
-<p>2025 – 2029</p>
-</div>
-<div>
-<h3>Intermediate MPC</h3>
-<p>2023 – 2025</p>
-<h3> 10th Class (CBSE) </h3>
-<p> 2013-2023 </p>
-</div>
-</div>
+  <h2 class="title">Education</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>B.Tech Computer Science (Data Science)</h3>
+      <p>2025 – 2029</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Intermediate MPC</h3>
+      <p>2023 – 2025</p>
+    </div>
+    <div class="timeline-item">
+      <h3> 10th class (CBSE) </h3>
+      <p>2013 – 2023</p>
+    </div>
+
+
+  </div>
 </section>
 
 <!-- CERTIFICATES -->
@@ -404,11 +421,11 @@ in coding competitions.
 <h2 class="title">Projects</h2>
 <div class="grid">
 <div class="card">
-<img src="images/images/IMG-20260303-WA0016.jpg" alt="">
+<img src="images/IMG-20260303-WA0016.jpg" alt="">
 <h3>Health Tracker Website</h3>
 </div>
 <div class="card">
-<img src="images/images/IMG-20260303-WA0017.jpg" alt="">
+<img src="images/IMG-20260303-WA0017.jpg" alt="">
 <h3>Python Game</h3>
 </div>
 </div>
@@ -550,4 +567,5 @@ window.addEventListener("load", scrollAnimations);
 </body>
 
 </html>
+
 
