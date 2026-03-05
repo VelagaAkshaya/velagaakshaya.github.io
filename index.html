@@ -165,6 +165,9 @@ section.active{
   gap:25px;
 }
 
+  .hidden{
+  display:none;
+}
 /* CARD */
 .card{
   background:rgba(255,255,255,0.05);
@@ -480,6 +483,47 @@ in coding competitions.
 <h3>Python Game</h3>
 </div>
 </div>
+  <!-- Hidden Certificates -->
+<div id="more-certs" class="grid hidden">
+
+  <div class="card">
+    <img src="images/Screenshot 2026-03-03 221342.png" alt="">
+    <h3>Cisco - C Programming</h3>
+  </div>
+
+  <div class="card">
+    <img src="images/Screenshot 2026-02-11 190529.png" alt="">
+    <h3> Appreciation </h3>
+  </div>
+
+  <div class="card">
+    <img src="images/Screenshot 2026-03-05 210024.png" alt="">
+    <h3>Cisco - C Programming 2</h3>
+  </div>
+
+
+  <div class="card">
+    <img src="images/Screenshot 2026-03-05 213043.png" alt="">
+    <h3>CodeChef - HTML & CSS</h3>
+  </div>
+
+  <div class="card">
+    <img src="images/Screenshot 2026-03-05 205817.png" alt="">
+    <h3>CodeChef - Python </h3>
+  </div>
+
+  <div class="card">
+    <img src="images/Screenshot 2026-03-05 203856.png" alt="">
+    <h3>Webinar - Python Full Stack & Resume Building</h3>
+  </div>
+</div>
+
+<div style="text-align:center; margin-top:30px;">
+  <button onclick="toggleCertificates()" class="btn" id="viewBtn">
+    View More
+  </button>
+</div>
+
 </section>
 
 <!-- SKILLS -->
@@ -630,11 +674,24 @@ navItems.forEach(link => {
     navLinks.classList.remove("active");
   });
 });
-  
+
+  function toggleCertificates(){
+  const moreCerts = document.getElementById("more-certs");
+  const btn = document.getElementById("viewBtn");
+
+  if(moreCerts.classList.contains("hidden")){
+    moreCerts.classList.remove("hidden");
+    btn.textContent = "View Less";
+  } else {
+    moreCerts.classList.add("hidden");
+    btn.textContent = "View More";
+  }
+}
 </script>
 </body>
 
 </html>
+
 
 
 
